@@ -24,6 +24,7 @@ No requirements.
 | name | name of the role in aws console | `string` | n/a | yes |
 | path | path of the role in aws console | `string` | `"/"` | no |
 | tags | Tags for resources | `map(string)` | <pre>{<br>  "Terraform": "True"<br>}</pre> | no |
+| enable\_gcci\_boundary | permission boundary toggle | `bool` | `true` | no |
 
 ## Outputs
 
