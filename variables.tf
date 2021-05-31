@@ -8,6 +8,12 @@ variable "description" {
   type        = string
 }
 
+variable "max_session_duration" {
+  description = "maximum duration in seconds for role, between 1 to 12 hours"
+  type        = number
+  default     = 3600
+}
+
 variable "name" {
   description = "name of the role in aws console"
   type        = string

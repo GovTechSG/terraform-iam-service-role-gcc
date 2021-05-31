@@ -9,6 +9,7 @@ resource "aws_iam_role" "iam_role" {
   description           = var.description
   permissions_boundary  = var.enable_gcci_boundary ? "arn:aws:iam::${data.aws_caller_identity.current.account_id}:policy/GCCIAccountBoundary" : ""
   assume_role_policy    = var.base_policy
+  max_session_duration  = var.max_session_duration
   force_detach_policies = true
 
   tags = var.tags
