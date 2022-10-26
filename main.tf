@@ -29,3 +29,9 @@ resource "aws_iam_role_policy_attachment" "attach_policy" {
   for_each   = var.attach_policies
   policy_arn = each.value
 }
+
+resource "aws_iam_instance_profile" "profile" {
+  count = var.create_instance_profile ? 1 : 0
+  name  = "${var.name}-profile"
+  role  = aws_iam_role.iam_role.name
+}

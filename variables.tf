@@ -55,3 +55,9 @@ variable "enable_gcci_boundary" {
   type        = bool
   default     = true
 }
+
+variable "create_instance_profile" {
+  description = "Create an instance profile using this role"
+  type        = bool
+  default     = false
+}
